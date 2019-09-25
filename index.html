@@ -230,6 +230,72 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-用CloudFlare-Workers搭建baidu镜像站" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/09/25/用CloudFlare-Workers搭建baidu镜像站/" class="article-date">
+      <time datetime="2019-09-25T07:32:56.000Z" itemprop="datePublished">2019-09-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/25/用CloudFlare-Workers搭建baidu镜像站/">用CloudFlare Workers搭建baidu镜像站</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>不多说开始搭建吧</p>
+<p>从网上搜到了利用 cloudflare workers 来搭建一个网站的镜像。</p>
+<p>链接：<a href="https://blog.qixiv.me/" target="_blank" rel="noopener">用CloudFlare Workers搭建Wiki镜像站</a></p>
+<p>其中用到的代码地址:<a href="https://github.com/Dandelionss/CloudFlare-Workers/blob/master/wiki.js" target="_blank" rel="noopener">点击即达</a></p>
+<p>我在<a href="https://gist.githubusercontent.com/tennc/361e141e325b5555ef38b5191a98f278/raw/509cbd53769a5d746bb849c2ccb9215897cc4cf9/CloudFlare-Workers.js" target="_blank" rel="noopener">gist.github.com</a> 在备份一份，免得丢失。</p>
+<p>主要就是修改第31行和第32行，改成自己相应的网址就好。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if (newUrl &amp;&amp; newUrl.host.indexOf(&quot;wikipedia.org&quot;) == -1)&#123;</span><br><span class="line">            targetUrl = (isPC(request.headers.get(&apos;user-agent&apos;)) ? &quot;zh.wikipedia.org/&quot;:&quot;zh.m.wikipedia.org/&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>改成下面的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if (newUrl &amp;&amp; newUrl.host.indexOf(&quot;baidu.com&quot;) == -1)&#123;</span><br><span class="line">            targetUrl = (isPC(request.headers.get(&apos;user-agent&apos;)) ? &quot;baidu.com/&quot;:&quot;baidu.com/&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>ok,访问试一试，完全正常。</p>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-复现cve-2019-0708" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
