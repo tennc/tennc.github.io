@@ -417,7 +417,7 @@
 <script src="/js/gitment.browser.js"></script>
 <script>
     var gitment = new Gitment({
-      id: window.location.pathname,
+      id: decodeURI(window.location.pathname),
       owner: 'tennc',
       repo: 'tennc.github.io',
       oauth: {
