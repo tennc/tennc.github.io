@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>upgrade hexo小记 | 80后小白一枚</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="更新一下blog常年不更新，再次更新一下，看了看自己的hexo版本,尴尬啊，最新的hexo版本已经5.X了，而我的还是3.X。故GG之，看看如何能无损更新hexo版本，并成功发布此篇文章。 一顿操作猛如虎，直接gg之，给出连接地址Hexo版本升级指南 升级1、全局升级hexo-cli，先hexo version查看当前版本，然后npm i hexo-cli -g，再次hexo version查看是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="upgrade hexo小记">
+<meta property="og:url" content="http://tennc.github.io/2021/06/05/upgrade-hexo%E5%B0%8F%E8%AE%B0/index.html">
+<meta property="og:site_name" content="80后小白一枚">
+<meta property="og:description" content="更新一下blog常年不更新，再次更新一下，看了看自己的hexo版本,尴尬啊，最新的hexo版本已经5.X了，而我的还是3.X。故GG之，看看如何能无损更新hexo版本，并成功发布此篇文章。 一顿操作猛如虎，直接gg之，给出连接地址Hexo版本升级指南 升级1、全局升级hexo-cli，先hexo version查看当前版本，然后npm i hexo-cli -g，再次hexo version查看是">
+<meta property="og:locale">
+<meta property="og:image" content="http://tennc.github.io/resources/image-20210605155142172.png">
+<meta property="article:published_time" content="2021-06-05T07:31:10.000Z">
+<meta property="article:modified_time" content="2021-06-05T07:51:47.056Z">
+<meta property="article:author" content="tennc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://tennc.github.io/resources/image-20210605155142172.png">
+  
+    <link rel="alternative" href="/atom.xml" title="80后小白一枚" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate"></a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a target="_blank" rel="noopener" href="http://luuman.github.io/FrontEndGuide/V1/">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="#" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/tennc" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                            
+                                <a class="fl weibo" target="_blank" href="#" title="weibo">weibo</a>
+                            
+                                <a class="fl google" target="_blank" href="#" title="google">google</a>
+                            
+                                <a class="fl twitter" target="_blank" href="#" title="twitter">twitter</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/0708/" style="font-size: 10px;">0708</a> <a href="/tags/789/" style="font-size: 10px;">789</a> <a href="/tags/Pentesting-Cheatsheets/" style="font-size: 10px;">Pentesting Cheatsheets</a> <a href="/tags/Typroa/" style="font-size: 10px;">Typroa</a> <a href="/tags/V-p-n/" style="font-size: 10px;">V(*)p(*)n</a> <a href="/tags/asm/" style="font-size: 10px;">asm</a> <a href="/tags/bluekeep/" style="font-size: 10px;">bluekeep</a> <a href="/tags/cloudflare/" style="font-size: 10px;">cloudflare</a> <a href="/tags/crack/" style="font-size: 20px;">crack</a> <a href="/tags/create-file/" style="font-size: 10px;">create file</a> <a href="/tags/cve-2019-0708/" style="font-size: 10px;">cve-2019-0708</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/good-Cheatsheets/" style="font-size: 10px;">good Cheatsheets</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/red/" style="font-size: 10px;">red</a> <a href="/tags/redteam/" style="font-size: 10px;">redteam</a> <a href="/tags/webshell/" style="font-size: 10px;">webshell</a> <a href="/tags/win-10-create-file-refresh/" style="font-size: 10px;">win 10 create file refresh</a> <a href="/tags/windows10/" style="font-size: 10px;">windows10</a> <a href="/tags/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">常用命令</a> <a href="/tags/%E6%9D%82%E8%B0%88/" style="font-size: 10px;">杂谈</a> <a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 10px;">闲聊</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://tennc.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">80后，愣娃一枚。</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me"></a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me"></a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a target="_blank" rel="noopener" href="http://luuman.github.io/FrontEndGuide/V1/">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="#" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/tennc" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                    
+                        <a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+                    
+                        <a class="google" target="_blank" href="#" title="google">google</a>
+                    
+                        <a class="twitter" target="_blank" href="#" title="twitter">twitter</a>
+                    
+                        <a class="linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-upgrade-hexo小记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2021/06/05/upgrade-hexo%E5%B0%8F%E8%AE%B0/" class="article-date">
+      <time datetime="2021-06-05T07:31:10.000Z" itemprop="datePublished">2021-06-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      upgrade hexo小记
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="更新一下blog"><a href="#更新一下blog" class="headerlink" title="更新一下blog"></a>更新一下blog</h3><p>常年不更新，再次更新一下，看了看自己的<code>hexo</code>版本,尴尬啊，最新的hexo版本已经5.X了，而我的还是3.X。故GG之，看看如何能无损更新hexo版本，并成功发布此篇文章。</p>
+<p>一顿操作猛如虎，直接gg之，给出连接地址<a target="_blank" rel="noopener" href="https://lanvnal.com/2020/02/16/hexo-ban-ben-sheng-ji/">Hexo版本升级指南</a></p>
+<h2 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h2><p>1、全局升级hexo-cli，先<code>hexo version</code>查看当前版本，然后<code>npm i hexo-cli -g</code>，再次<code>hexo version</code>查看是否升级成功。</p>
+<p>2、使用<code>npm install -g npm-check</code>和<code>npm-check</code>，检查系统中的插件是否有升级的，可以看到自己前面都安装了那些插件</p>
+<p>3、使用<code>npm install -g npm-upgrade</code>和<code>npm-upgrade</code>，升级系统中的插件</p>
+<p>4、使用<code>npm update -g</code>和<code>npm update --save</code></p>
+<p><img src="/resources/image-20210605155142172.png" alt="image-20210605155142172"></p>
+<h3 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h3><p>升级成功后，出现报错提示<code>Cannot find module &#39;through&#39;</code>,根据提示让尝试运行<code>rm -rf node_modules &amp;&amp; npm install --force</code>,待运行结束，运行<code>hexo version</code>，输出正常。</p>
+<h3 id="开始写文档"><a href="#开始写文档" class="headerlink" title="开始写文档"></a>开始写文档</h3><p><code>hexo new &quot;文章标题&quot;</code>默认生成一篇文章</p>
+<p>用Typora来写，写好之后保存</p>
+<p>运行命令<code>hexo -s g</code></p>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2021/06/05/upgrade-hexo%E5%B0%8F%E8%AE%B0/">upgrade hexo小记</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问  的个人博客"></a></p>
+        <p><span>发布时间:</span>2021年06月05日 - 15时31分</p>
+        <p><span>最后更新:</span>2021年06月05日 - 15时51分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2021/06/05/upgrade-hexo%E5%B0%8F%E8%AE%B0/" title="upgrade hexo小记">http://tennc.github.io/2021/06/05/upgrade-hexo%E5%B0%8F%E8%AE%B0/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://tennc.github.io/2021/06/05/upgrade-hexo%E5%B0%8F%E8%AE%B0/　　作者: " title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/12/windows10-%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E9%9C%80%E8%A6%81%E5%88%B7%E6%96%B0%E6%89%8D%E6%98%BE%E7%A4%BA%E7%9A%84%E5%A4%84%E7%90%86%E5%8A%9E%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">windows10 新建文件夹需要刷新才显示的处理办法</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E4%B8%80%E4%B8%8Bblog"><span class="toc-number">1.</span> <span class="toc-text">更新一下blog</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%87%E7%BA%A7"><span class="toc-number"></span> <span class="toc-text">升级</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%A5%E9%94%99"><span class="toc-number">1.</span> <span class="toc-text">报错</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E5%86%99%E6%96%87%E6%A1%A3"><span class="toc-number">2.</span> <span class="toc-text">开始写文档</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <div id="gitments"></div>
+<script src="/js/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+      id: decodeURI(window.location.pathname),
+      owner: 'tennc',
+      repo: 'tennc.github.io',
+      oauth: {
+        client_id: 'bd3eeffdb0bb860919a2',
+        client_secret: '79c33e47cd70c282271acfde2301e349af77f107',
+      },
+    })
+    gitment.render('gitments')
+</script>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2020/03/12/windows10-%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E9%9C%80%E8%A6%81%E5%88%B7%E6%96%B0%E6%89%8D%E6%98%BE%E7%A4%BA%E7%9A%84%E5%A4%84%E7%90%86%E5%8A%9E%E6%B3%95/" title="下一篇: windows10 新建文件夹需要刷新才显示的处理办法">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/06/05/upgrade-hexo%E5%B0%8F%E8%AE%B0/">upgrade hexo小记</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/12/windows10-%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E9%9C%80%E8%A6%81%E5%88%B7%E6%96%B0%E6%89%8D%E6%98%BE%E7%A4%BA%E7%9A%84%E5%A4%84%E7%90%86%E5%8A%9E%E6%B3%95/">windows10 新建文件夹需要刷新才显示的处理办法</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/21/webshell-project/">webshell project</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/18/webshell-start-%E7%AA%81%E7%A0%B45k/">webshell start 突破5k</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/25/%E7%94%A8CloudFlare-Workers%E6%90%AD%E5%BB%BAbaidu%E9%95%9C%E5%83%8F%E7%AB%99/">用CloudFlare Workers搭建baidu镜像站</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/08/%E5%A4%8D%E7%8E%B0cve-2019-0708/">复现cve-2019-0708</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/04/ired-team/">ired team</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/02/crack-xx%E5%8A%A0%E9%80%9F%E5%99%A8/">crack xx加速器</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/02/crack%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">crack常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/01/Typora%E5%86%99%E6%96%87%E7%AB%A0/">Typora写文章</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/01/hello-world/">Hello World</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2021 tennc
+                power by <a href="https://www.cloudflare.com/" target="_blank">cloudflare</a>
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(https://api.ixiaowai.cn/api/api.php)";
+            $(".container").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

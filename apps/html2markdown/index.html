@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <title>HTML转Markdown工具</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
     <script type="text/javascript" src="../static/vendor/vue/vue.js"></script>
     <script src="../static/vendor/require/require.js"></script>
 </head>
@@ -14,7 +14,7 @@
         <div class="panel-heading">
             <h3 class="panel-title">
                 <a href="http://www.baidufe.com/fehelper/feedback.html" target="_blank" class="x-a-high">
-                    <img src="../static/img/fe-16.png" alt="fehelper"> FeHelper</a>：{{toolName[codeType]}}
+                    <img src="../static/img/fe-16.png" alt="fehelper"/> FeHelper</a>：{{toolName[codeType]}}
                 <span class="x-xdemo" ref="demoLink1" @click="setDemo">示例：{{codeType}}片段</span>
 
                 <span class="x-switch ui-fl-r" ref="btnSwitch" @click="trans">切换为{{toolName[nextCodeType]}}&gt;&gt;</span>
@@ -24,7 +24,8 @@
     <div class="panel-body mod-endecode">
 
         <div class="row">
-            <textarea class="form-control mod-textarea ui-mb-10" id="srcText" ref="srcText" v-model="sourceContent" @input="convert" placeholder="粘贴或输入需要进行转换的内容"></textarea>
+            <textarea class="form-control mod-textarea ui-mb-10" id="srcText" ref="srcText" v-model="sourceContent" @input="convert"
+                      placeholder="粘贴或输入需要进行转换的内容"></textarea>
         </div>
 
         <div id="rst" class="row ui-mt-10" v-show="resultContent.length > 0">
@@ -37,7 +38,7 @@
     <div class="html-demo hide" ref="htmlDemo">
         <h2 class="fe-function-title">FE助手</h2>
         <ul class="fe-function-list">
-            <li class="-x-endecode">
+            <li class="-x-endecode" >
                 <span>字符串编解码</span></li>
             <li class="-x-jsonformat">
                 <span><code>Json</code>串格式化</span></li>

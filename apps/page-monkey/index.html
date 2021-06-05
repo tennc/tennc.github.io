@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
-    <head><meta name="generator" content="Hexo 3.9.0">
-        <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8"/>
         <title>网页油猴工具</title>
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index.css"/>
         <script type="text/javascript" src="../static/vendor/vue/vue.js"></script>
     </head>
 
@@ -14,7 +14,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         <a href="http://www.baidufe.com/fehelper/feedback.html" target="_blank" class="x-a-high">
-                            <img src="../static/img/fe-16.png" alt="fehelper"> FeHelper</a>：网页再造精灵
+                            <img src="../static/img/fe-16.png" alt="fehelper"/> FeHelper</a>：网页再造精灵
 
                         <span class="x-toolbox">
                             <a href="#" id="import" @click="importModifier()" class="x-tooltip blue-tooltip">导入精灵</a><span class="x-line">|</span>
@@ -32,7 +32,8 @@
                             <a href="#" @click="createModifier">添加小精灵&gt;&gt;</a>
                         </div>
                         <ul id="modifiers">
-                            <li v-for="cm in cachedModifiers" :id="cm.id" :class="{'x-selected': editCM.id === cm.id}" @click="selectModifier(cm)">
+                            <li v-for="cm in cachedModifiers" :id="cm.id" :class="{'x-selected': editCM.id === cm.id}"
+                                @click="selectModifier(cm)">
                                 <i class="xm-icon" :class="cm.mDisabled === null ? 'xm-create' : (cm.mDisabled ? 'xm-disable' : 'xm-enable')"></i>
                                 <span v-html="cm.mName || '未命名'"></span>
                             </li>

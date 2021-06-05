@@ -212,7 +212,7 @@ a {
 }
 #container #mobile-nav {
   display: none;
-  background: url("../img/bg.jpg") #515457;
+  background: url("https://api.ixiaowai.cn/api/api.php") #515457;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -251,7 +251,7 @@ a {
   margin: 3px;
 }
 #container .left-col {
-  background: url("../img/bg.jpg") #515457;
+  background: url("https://api.ixiaowai.cn/api/api.php") #515457;
   width: 300px;
   position: fixed;
   opacity: 1;
